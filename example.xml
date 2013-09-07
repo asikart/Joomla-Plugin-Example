@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="folder" method="upgrade">
+    <name>plg_folder_example</name>
+    <author>Asika</author>
+    <creationDate>2013-09-08</creationDate>
+    <copyright>Copyright (C) 2013 Asikart.com</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>asika@asikart.com</authorEmail>
+    <authorUrl>http://asikart.com</authorUrl>
+    <version>1.0</version>
+    <description>PLG_FOLDER_EXAMPLE_XML_DESCRIPTION</description>
+    
+    
+    <scriptfile>install.php</scriptfile>
+    
+    <!-- plugin sql file
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+          </sql>
+    </install>
+    
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+          </sql>
+    </uninstall>
+    -->
+    
+    
+    <files>
+        <filename plugin="example">example.php</filename>
+        <filename>index.html</filename>
+        <filename>install.php</filename>
+        <folder>language</folder>
+        <folder>lib</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                
+                <field name="field1" type="text"
+                    description="PLG_FOLDER_EXAMPLE_FIELD1_DESC"
+                    label="PLG_FOLDER_EXAMPLE_FIELD1_LABEL"
+                />
+                
+            </fieldset>
+
+        </fields>
+    </config>
+    
+    
+    <updateservers>
+        <server type="collection">http://example.com/list.xml</server>
+        <server type="extension" priority="1" name="Asikart Example Plugin">http://update.server.com/plugins/plg_example.xml</server>
+    </updateservers>
+    
+    
+</extension>
