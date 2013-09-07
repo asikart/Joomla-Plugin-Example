@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="folder" method="upgrade">
+    <name>plg_folder_example</name>
+    <author>Asika</author>
+    <creationDate>2012-11-12</creationDate>
+    <copyright>Copyright (C) 2012 Asikart.com</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>asika@asikart.com</authorEmail>
+    <authorUrl>http://asikart.com</authorUrl>
+    <version>1.0</version>
+    <description>PLG_FOLDER_EXAMPLE_XML_DESCRIPTION</description>
+    
+    
+    <scriptfile>install.php</scriptfile>
+    
+    <!-- plugin folder now has no sql file
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+          </sql>
+    </install>
+    
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+          </sql>
+    </uninstall>
+    -->
+    
+    
+    <files>
+        <filename plugin="example">example.php</filename>
+        <filename>index.html</filename>
+        <filename>install.php</filename>
+        <folder>language</folder>
+        <folder>lib</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="field1" type="text"
+                    description="Example field 1"
+                    label="Example field 1"
+                />
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="include_path" type="text"
+                    label="PLG_FOLDER_EXAMPLE_INCLUDE_PATH"
+                    default="easyset"
+                />
+            </fieldset>
+
+        </fields>
+    </config>
+    
+    
+    <updateservers>
+        <!--<server type="collection">http://example.com/list.xml</server>-->
+        <server type="extension" priority="1" name="Asikart Example Plugin">http://update.asikart.com/plugins/plg_example.xml</server>
+    </updateservers>
+    
+    
+</extension>
