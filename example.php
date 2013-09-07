@@ -20,7 +20,11 @@ jimport('joomla.plugin.plugin');
  */
 class plgFolderExample extends JPlugin
 {
-    
+    /**
+     * Self instance
+     *
+     * @var plgFolderExample
+     */
     public static $_self ;
     
     /**
@@ -34,18 +38,22 @@ class plgFolderExample extends JPlugin
     public function __construct(&$subject, $config)
     {
         parent::__construct( $subject, $config );
+        
+        // Load plugin language in front-end
         $this->loadLanguage();
+        
+        // Store Application in self
         $this->app = JFactory::getApplication();
         
+        // Self reference
         self::$_self = $this ;
     }
     
-    
-    
-    /*
-     * function getInstance
+    /**
+     * Get self object instance.
+     *
+     * @return  plgFolderExample
      */
-    
     public static function getInstance()
     {
         return self::$_self ;
@@ -56,48 +64,37 @@ class plgFolderExample extends JPlugin
     // system Events
     // ======================================================================================
     
-    /*
-     * function onAfterInitialise
+    /**
+     * After Initialise Event.
      */
-    
     public function onAfterInitialise()
     {
         
     }
     
-    
-    
-    /*
-     * function onAfterRoute
+    /**
+     * After Route Event.
      */
-    
     public function onAfterRoute()
     {
         
     }
     
-    
-    
-    /*
-     * function onAfterDispatch
+    /**
+     * After Dispatch Event.
      */
-    
     public function onAfterDispatch()
     {
         
     }
     
-    
-    
-    /*
-     * function onAfterRender
+    /**
+     * After Render Event.
      */
-    
     public function onAfterRender()
     {
         
     }
-    
     
     
     
@@ -120,7 +117,6 @@ class plgFolderExample extends JPlugin
     {
     }
     
-    
     /**
      * Example after display title method
      *
@@ -137,7 +133,6 @@ class plgFolderExample extends JPlugin
     {
     }
     
-    
     /**
      * Example before display content method
      *
@@ -153,7 +148,6 @@ class plgFolderExample extends JPlugin
     public function onContentBeforeDisplay($context, &$article, &$params, $page=0)
     {
     }
-    
 
     /**
      * Example after display content method
@@ -170,7 +164,6 @@ class plgFolderExample extends JPlugin
     public function onContentAfterDisplay($context, &$article, &$params, $page=0)
     {
     }
-    
     
     /**
      * Example before save content method
@@ -190,7 +183,6 @@ class plgFolderExample extends JPlugin
     {
     }
     
-    
     /**
      * Example after save content method
      * Article is passed by reference, but after the save, so no changes will be saved.
@@ -204,7 +196,6 @@ class plgFolderExample extends JPlugin
     public function onContentAfterSave($context, &$article, $isNew)
     {
     }
-    
 
     /**
      * Example before delete method.
@@ -218,7 +209,6 @@ class plgFolderExample extends JPlugin
     {
     }
     
-    
     /**
      * Example after delete method.
      *
@@ -230,7 +220,6 @@ class plgFolderExample extends JPlugin
     public function onContentAfterDelete($context, $data)
     {
     }
-    
 
     /**
      * Example after delete method.
@@ -301,7 +290,6 @@ class plgFolderExample extends JPlugin
     {
     }
     
-    
     /**
      * This method should handle any login logic and report back to the subject
      *
@@ -315,7 +303,6 @@ class plgFolderExample extends JPlugin
     {
     }
     
-    
     /**
      * This method should handle any logout logic and report back to the subject
      *
@@ -328,7 +315,6 @@ class plgFolderExample extends JPlugin
     public function onUserLogout($user, $options = array())
     {
     }
-    
     
     /**
      * Utility method to act on a user before it has been saved.
@@ -346,7 +332,6 @@ class plgFolderExample extends JPlugin
     {
     }
     
-    
     /**
      * Remove all sessions for the user name
      *
@@ -360,7 +345,6 @@ class plgFolderExample extends JPlugin
     public function onUserAfterDelete($user, $success, $msg)
     {
     }
-    
     
     /**
      * @param    string    $context    The context for the data
