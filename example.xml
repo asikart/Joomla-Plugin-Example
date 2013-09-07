@@ -2,8 +2,8 @@
 <extension version="2.5" type="plugin" group="folder" method="upgrade">
     <name>plg_folder_example</name>
     <author>Asika</author>
-    <creationDate>2012-11-12</creationDate>
-    <copyright>Copyright (C) 2012 Asikart.com</copyright>
+    <creationDate>2013-09-08</creationDate>
+    <copyright>Copyright (C) 2013 Asikart.com</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>asika@asikart.com</authorEmail>
     <authorUrl>http://asikart.com</authorUrl>
@@ -13,7 +13,7 @@
     
     <scriptfile>install.php</scriptfile>
     
-    <!-- plugin folder now has no sql file
+    <!-- plugin sql file
     <install>
         <sql>
             <file driver="mysql" charset="utf8">sql/install.sql</file>
@@ -41,17 +41,12 @@
         <fields name="params">
 
             <fieldset name="basic">
+                
                 <field name="field1" type="text"
-                    description="Example field 1"
-                    label="Example field 1"
+                    description="PLG_FOLDER_EXAMPLE_FIELD1_DESC"
+                    label="PLG_FOLDER_EXAMPLE_FIELD1_LABEL"
                 />
-            </fieldset>
-
-            <fieldset name="advanced">
-                <field name="include_path" type="text"
-                    label="PLG_FOLDER_EXAMPLE_INCLUDE_PATH"
-                    default="easyset"
-                />
+                
             </fieldset>
 
         </fields>
@@ -59,8 +54,8 @@
     
     
     <updateservers>
-        <!--<server type="collection">http://example.com/list.xml</server>-->
-        <server type="extension" priority="1" name="Asikart Example Plugin">http://update.asikart.com/plugins/plg_example.xml</server>
+        <server type="collection">http://example.com/list.xml</server>
+        <server type="extension" priority="1" name="Asikart Example Plugin">http://update.server.com/plugins/plg_example.xml</server>
     </updateservers>
     
     
