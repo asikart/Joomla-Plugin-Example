@@ -269,7 +269,7 @@ class plgFolderExample extends JPlugin
      * @return    void
      * @since    1.6
      */
-    public function onUserBeforeSave($user, $isnew, $success, $msg)
+    public function onUserBeforeSave($user, $isnew, $success, $msg = null)
     {
     }
     
@@ -286,7 +286,7 @@ class plgFolderExample extends JPlugin
      * @return    void
      * @since    1.6
      */
-    public function onUserAfterSave($user, $isnew, $success, $msg)
+    public function onUserAfterSave($user, $isnew, $success, $msg = null)
     {
     }
     
