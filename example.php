@@ -258,7 +258,7 @@ class plgFolderExample extends JPlugin
     
     
     /**
-     * Utility method to act on a user after it has been saved.
+     * Utility method to act on a user before it has been saved.
      *
      *
      * @param    array      $user       Holds the new user data.
@@ -317,7 +317,7 @@ class plgFolderExample extends JPlugin
     }
     
     /**
-     * Utility method to act on a user before it has been saved.
+     * Utility method to act on a user before it has been deleted.
      *
      *
      * @param    array      $user       Holds the new user data.
